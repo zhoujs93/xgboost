@@ -11,7 +11,7 @@ RUN apt-get update && \
 
 # 3) Configure SSH keys
 RUN mkdir -p /root/.ssh && \
-    echo 'ssh-rsa AAAA… your_key_here … putsncalls23' > /root/.ssh/authorized_keys && \
+    echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDHSYar3+KJe6Lc+mWsAIBjYbbaygO/dFaPsjwxmRjqYjCMoPsWGEqCPb4ftRhUUAQ3dH1MGI7ieahJ3dEl2wBVVCNK7Qafr01RqnbTnZI/yGxkPH/uQPCJSStLxFJkDhCTok85RTy+9/qwiJHHv3v2Fi2XCk1Y7fd5iPSKwMD4dybqlpwsgwV3jjlcoBxXsio/LVyciGDvSIz6Vrm+iuwlLzXRd69jWSzt1eQGaF5e2Y1XhS9+cS2DwYjo/BOYG4qTtxR+zkfFGCLg3byiwx5AEVYCAYOhjBJpmvUUcBcvHo9U88sZfgJtbN3+K3PK99BLr1vW4JAJ/A0Fm3++yvYZ putsncalls23' > /root/.ssh/authorized_keys && \
     chmod 700 /root/.ssh && chmod 600 /root/.ssh/authorized_keys && \
     sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
